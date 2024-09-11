@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40534C"
+    tools:context=".signupActivity3">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Create Account"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_marginTop="110dp"
+         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/line"
+        android:layout_marginTop="50dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/backbuttt"
+        android:id="@+id/back"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almost done! Create your account."
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="374dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="285dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittext_border"
+        android:hint="  Email Address"
+        android:inputType="text"
+        android:textSize="17sp"
+         />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="374dp"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="370dp"
+        android:background="@drawable/edittext_border"
+        android:hint="   Password"
+        android:inputType="text"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/phno"
+        android:layout_width="374dp"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="455dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittext_border"
+        android:hint="   Phone number "
+        android:inputType="text"
+        android:textSize="16sp"
+         />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="520dp"
+        android:text="10 characters minimum"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="362dp"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="700dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:cornerRadius="10dp"
+         />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="385dp"
+        android:layout_height="10dp"
+        android:progressTint="@color/white"
+        android:progress="25"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.102" />
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".nutrihelp"
+    android:background="#AAB396">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:textSize="20dp"
+        android:layout_marginStart="50dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="Please select your goal preference for diet recommendations:"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/nutritag"
+    android:layout_marginTop="70dp"
+    android:layout_centerHorizontal="true"
+    />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/backbutt"
+        android:id="@+id/back"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+
+
+    <Button
+        android:id="@+id/bulk"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="@color/white"
+        android:text="BULK"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:cornerRadius="10dp" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:src="@drawable/bulk"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="100dp"/>
+
+    <Button
+        android:id="@+id/cut"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="380dp"
+        android:backgroundTint="@color/white"
+        android:text="CUT"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:cornerRadius="10dp" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:src="@drawable/cut"
+        android:layout_marginTop="368dp"
+        android:layout_marginStart="100dp"/>
+
+    <Button
+        android:id="@+id/consis"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="460dp"
+        android:backgroundTint="@color/white"
+        android:text="CONSISTENT"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:cornerRadius="10dp" />
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:src="@drawable/consis"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="75dp"/>
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="800dp"
+        android:backgroundTint="@color/white"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:cornerRadius="10dp" />
+
+
+
+
+</RelativeLayout>

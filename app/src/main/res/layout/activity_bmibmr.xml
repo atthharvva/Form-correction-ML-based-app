@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bmibmr"
+    android:background="#AAB396">
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/backbutt"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    />
+
+
+    <ImageView
+        android:id="@+id/ivMale"
+        android:layout_width="152dp"
+        android:layout_height="147dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/male" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bbmtag"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="100dp"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/ivFemale"
+        android:layout_width="152dp"
+        android:layout_height="147dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/fem" />
+
+    <Button
+        android:id="@+id/btnMale"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="310dp"
+        android:backgroundTint="@color/male_selected_color"
+        android:text="Male"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnFemale"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/female_selected_color"
+        android:text="Female"
+        android:layout_marginTop="310dp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="225dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tvHeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height (in cm)"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="400dp"
+        android:textSize="20dp"
+        android:layout_marginStart="50dp" />
+
+    <SeekBar
+        android:id="@+id/heightSlider"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:max="250"
+        android:progress="170"
+        android:layout_marginTop="435dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/tvHeightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="170 cm"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:id="@+id/tvWeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight (in kg)"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="240dp"
+        android:textSize="20dp"
+        android:layout_marginTop="400dp" />
+
+    <SeekBar
+        android:id="@+id/weightSlider"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="70"
+        android:layout_marginTop="435dp"
+        android:layout_marginStart="220dp" />
+
+    <TextView
+        android:id="@+id/tvWeightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="70 kg"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="285dp" />
+
+    <Button
+        android:id="@+id/btnBMI"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="650dp"
+        android:backgroundTint="@color/white"
+        android:text="BMI"
+        android:textColor="@android:color/black"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/btnBMR"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="BMR"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="700dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/tvAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="540dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:layout_below="@id/tvAgeLabel"
+        android:layout_marginStart="100dp" />
+
+    <TextView
+        android:id="@+id/tvAgeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22"
+        android:textSize="24sp"
+        android:layout_below="@id/tvAgeLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_below="@id/tvAgeLabel"
+        android:layout_marginStart="245dp" />
+
+</RelativeLayout>

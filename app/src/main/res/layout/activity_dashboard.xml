@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard"
+    android:background="#2c4c44">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="385dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="170dp" />
+
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="19dp"
+        android:id="@+id/workoutlst"
+        android:layout_marginTop="380dp"
+        android:src="@drawable/workoutlist1" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="380dp"
+        android:id="@+id/bmibmr"
+        android:src="@drawable/bmibmr"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/backbutdas"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="530dp"
+        android:id="@+id/nutrihelp"
+        android:src="@drawable/nutrihelp" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="630dp"
+        android:id="@+id/water"
+        android:src="@drawable/waterin" />
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Sign Out"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="90dp"
+        android:text="Good Morning !"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

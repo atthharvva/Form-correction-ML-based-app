@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="#536d5e">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="-1dp"
+        android:src="@drawable/headerlogin" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/backbutlog"
+        android:layout_marginTop="10dp"
+        android:id="@+id/back"
+        android:layout_marginStart="15dp"/>
+
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:id="@+id/email"
+        android:hint="   Email Address"
+        android:layout_marginTop="290dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:background="@drawable/edittext_border"
+        android:paddingLeft="25dp"
+        android:drawableLeft="@drawable/baseline_email_24"
+
+        />
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:id="@+id/password"
+        android:hint="   Password"
+        android:layout_marginTop="350dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:padding="10dp"
+        android:paddingLeft="25dp"
+
+        android:background="@drawable/edittext_border"
+        android:drawableLeft="@drawable/baseline_password_24"
+        />
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:id="@+id/loginbut"
+        android:layout_marginTop="420dp"
+        android:text="Log In"
+        app:cornerRadius="10dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:backgroundTint="@color/white"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notegis"
+        android:text="Not Registered Yet? Sign Up"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_marginTop="480dp"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>
