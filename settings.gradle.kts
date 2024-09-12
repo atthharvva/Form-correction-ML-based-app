@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Accurepp"
 include(":app")
+include(":openCV")
