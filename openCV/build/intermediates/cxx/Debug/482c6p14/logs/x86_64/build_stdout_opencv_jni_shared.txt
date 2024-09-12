@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\athar\AndroidStudioProjects\Form-correction-ML-based-app\openCV\.cxx\Debug\482c6p14\x86_64'
+ninja: no work to do.
