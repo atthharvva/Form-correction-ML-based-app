@@ -1,5 +1,8 @@
 [versions]
 agp = "8.6.0"
+cameraCoreVersion = "1.3.0"
+gradle = "4.2.2"
+guava = "32.0.1-android"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -14,8 +17,27 @@ googleServices = "4.4.2"
 firebaseDatabase = "21.0.0"
 firebaseFirestore = "25.0.0"
 firebaseAuth = "23.0.0"
+materialVersion = "1.9.0"
+tasksVision = "0.20230731"
+tensorflowLiteSupport = "0.1.0"
+tensorflowLiteMetadata = "0.1.0"
+tensorflowLiteGpu = "2.3.0"
+poseDetectionCommon = "17.0.0"
+tensorflowLiteSupportVersion = "0.4.4"
+tensorflowLiteTaskVision = "0.4.3"
+tensorflowLiteTaskVisionVersion = "0.4.4"
+tensorflowTensorflowLiteTaskVision = "0.4.2"
+cameraView = "1.3.4"
+cameraLifecycle = "1.3.4"
+firebaseCrashlyticsBuildtools = "3.0.2"
 
 [libraries]
+androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCoreVersion" }
+androidx-camera-extensions = { module = "androidx.camera:camera-extensions", version.ref = "cameraCoreVersion" }
+camera-core = { module = "androidx.camera:camera-core", version.ref = "cameraView" }
+camera-core-v130 = { module = "androidx.camera:camera-core", version.ref = "cameraCoreVersion" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -30,6 +52,18 @@ google-services = { group = "com.google.gms", name = "google-services", version.
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+material-v190 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+tensorflow-lite-support = { group = "org.tensorflow", name = "tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
+tensorflow-lite-metadata = { group = "org.tensorflow", name = "tensorflow-lite-metadata", version.ref = "tensorflowLiteMetadata" }
+tensorflow-lite-gpu = { group = "org.tensorflow", name = "tensorflow-lite-gpu", version.ref = "tensorflowLiteGpu" }
+pose-detection-common = { group = "com.google.mlkit", name = "pose-detection-common", version.ref = "poseDetectionCommon" }
+tensorflow-lite-support-v044 = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupportVersion" }
+tensorflow-lite-task-vision = { module = "org.tensorflow:tensorflow-lite-task-vision", version.ref = "tensorflowLiteTaskVision" }
+tensorflow-lite-task-vision-v042 = { module = "org.tensorflow:tensorflow-lite-task-vision", version.ref = "tensorflowTensorflowLiteTaskVision" }
+tensorflow-lite-task-vision-v044 = { module = "org.tensorflow:tensorflow-lite-task-vision", version.ref = "tensorflowLiteTaskVisionVersion" }
+camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraLifecycle" }
+firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

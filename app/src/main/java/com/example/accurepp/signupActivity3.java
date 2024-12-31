@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +22,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signupActivity3 extends AppCompatActivity {
 
-    EditText email, password, phoneNumber;
+//    EditText email, password, phoneNumber;
+//    FirebaseAuth fAuth;
+//    DatabaseReference databaseReference;
+//    Button btn;
+//    ImageButton bck;
+
+    EditText email, password, phoneNumber, username;
     FirebaseAuth fAuth;
     DatabaseReference databaseReference;
     Button btn;
@@ -30,20 +37,100 @@ public class signupActivity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup3);
+
+//        email = findViewById(R.id.email);
+//        password = findViewById(R.id.password);
+//        phoneNumber = findViewById(R.id.phno);
+//        btn = findViewById(R.id.button);
+//        fAuth = FirebaseAuth.getInstance();
+//        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+//
+//        if (fAuth.getCurrentUser() != null) {
+//            startActivity(new Intent(getApplicationContext(), dashboard.class));
+//            finish();
+//        }
+//        bck=findViewById(R.id.back);
+//        bck.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String emaill = email.getText().toString().trim();
+//                String passwordd = password.getText().toString().trim();
+//                String phone = phoneNumber.getText().toString().trim();
+//                Intent intent = getIntent();
+//                String name = intent.getStringExtra("USER_NAME");
+//                String age = intent.getStringExtra("USER_AGE");
+//
+//                if (TextUtils.isEmpty(emaill)) {
+//                    email.setError("Email is Required");
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(passwordd)) {
+//                    password.setError("Password is Required");
+//                    return;
+//                }
+//                if (passwordd.length() < 8) {
+//                    password.setError("Password must be >= 8 Characters");
+//                    return;
+//                }
+//
+//                fAuth.createUserWithEmailAndPassword(emaill, passwordd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            // Retrieve additional data from intent
+//
+//
+//                            // Save user data to the Realtime Database
+//                            String userId = fAuth.getCurrentUser().getUid();
+//                            User user = new User(emaill, passwordd, phone, name, age);
+//                            databaseReference.child(userId).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                @Override
+//                                public void onComplete(@NonNull Task<Void> task) {
+//                                    if (task.isSuccessful()) {
+//                                        Toast.makeText(signupActivity3.this, "Account created ", Toast.LENGTH_SHORT).show();
+//                                        Intent intent = getIntent();
+//
+//
+//                                        startActivity(new Intent(getApplicationContext(), dashboard.class));
+//                                        finish();
+//                                    } else {
+//                                        Toast.makeText(signupActivity3.this, "Failed attempt", Toast.LENGTH_SHORT).show();
+//                                    }
+//                                }
+//                            });
+//                        } else {
+//                            Toast.makeText(signupActivity3.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//            }
+//        });
+//    }
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         phoneNumber = findViewById(R.id.phno);
+        username = findViewById(R.id.usernamee);
         btn = findViewById(R.id.button);
         fAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
 
+        // Check if user is already logged in
         if (fAuth.getCurrentUser() != null) {
             startActivity(new Intent(getApplicationContext(), dashboard.class));
             finish();
         }
-        bck=findViewById(R.id.back);
+
+        bck = findViewById(R.id.back);
         bck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,10 +144,11 @@ public class signupActivity3 extends AppCompatActivity {
                 String emaill = email.getText().toString().trim();
                 String passwordd = password.getText().toString().trim();
                 String phone = phoneNumber.getText().toString().trim();
+                String usernameValue = username.getText().toString().trim();
                 Intent intent = getIntent();
-                String name = intent.getStringExtra("USER_NAME");
                 String age = intent.getStringExtra("USER_AGE");
 
+                // Input validation
                 if (TextUtils.isEmpty(emaill)) {
                     email.setError("Email is Required");
                     return;
@@ -73,29 +161,29 @@ public class signupActivity3 extends AppCompatActivity {
                     password.setError("Password must be >= 8 Characters");
                     return;
                 }
+                if (TextUtils.isEmpty(usernameValue)) {
+                    username.setError("Username is Required");
+                    return;
+                }
 
+                // Create user with email and password
                 fAuth.createUserWithEmailAndPassword(emaill, passwordd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Retrieve additional data from intent
-
-
-                            // Save user data to the Realtime Database
                             String userId = fAuth.getCurrentUser().getUid();
-                            User user = new User(emaill, passwordd, phone, name, age);
+                            // Create User object with all details
+                            User user = new User(emaill, passwordd, phone, usernameValue, age);
+                            // Save user to database
                             databaseReference.child(userId).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(signupActivity3.this, "Account created ", Toast.LENGTH_SHORT).show();
-                                        Intent intent = getIntent();
-
-
+                                        Toast.makeText(signupActivity3.this, "Account created", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), dashboard.class));
                                         finish();
                                     } else {
-                                        Toast.makeText(signupActivity3.this, "Failed attempt", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(signupActivity3.this, "Failed to save user data", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -107,4 +195,5 @@ public class signupActivity3 extends AppCompatActivity {
             }
         });
     }
+
 }

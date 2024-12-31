@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bulking"
+    android:background="#8A9791">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/blackbuttt"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:clickable="true"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textSize="20dp"
+        android:layout_marginStart="50dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="Please select your Meal preference"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chickpea"
+        android:id="@+id/chickpeasw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paneertik"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:id="@+id/paneetikk"
+        android:clickable="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/alfapasta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="410dp"
+        android:id="@+id/alfredopas"
+        android:clickable="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/salmonbow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="540dp"
+        android:id="@+id/sallmon"
+        android:clickable="true"/>
+
+
+
+</RelativeLayout>

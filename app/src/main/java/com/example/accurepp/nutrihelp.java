@@ -17,17 +17,34 @@ public class nutrihelp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_nutrihelp);
-        bck=findViewById(R.id.back);
+        EdgeToEdge.enable(this);
+        bck = findViewById(R.id.back);
         bck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(nutrihelp.this, dashboard.class);
+                Intent i = new Intent(nutrihelp.this, dashboard.class);
                 startActivity(i);
                 finish();
             }
         });
+    }
 
+    // Method to open the bulking activity
+    public void openBulking(View view) {
+        Intent bulkingIntent = new Intent(nutrihelp.this, Bulking.class);
+        startActivity(bulkingIntent);
+    }
+
+    // Method to open the cutting activity
+    public void openCutting(View view) {
+        Intent cuttingIntent = new Intent(nutrihelp.this, Cutting.class);
+        startActivity(cuttingIntent);
+    }
+
+    // Method to open the consistent activity
+    public void openConsistent(View view) {
+        Intent consistentIntent = new Intent(nutrihelp.this, Consistent.class);
+        startActivity(consistentIntent);
     }
 }

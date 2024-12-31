@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFE6FF"
+    android:padding="16dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/blackbuttt" />
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/line"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"/>-->
+
+
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Weight (in kg)"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="110dp" />
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etWeight"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etWaterConsumed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="How much water have you drank (in Ltr)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/spinnerCategory"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Remaining Water"
+        android:backgroundTint="@color/black"
+        android:layout_below="@id/etWaterConsumed"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvRemainingWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining Water: 0 L"
+        android:textSize="18sp"
+        android:layout_below="@id/btnCalculate"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/ivAddOneLiter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/tvRemainingWater"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/litre"
+        android:layout_centerHorizontal="true" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivAddOneLiter"
+        android:layout_marginTop="1dp">
+
+        <ImageView
+            android:id="@+id/ivBlueImage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/blue" />
+
+        <TextView
+            android:id="@+id/tvMotivationQuote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep going!"
+            android:textSize="16sp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="495dp"
+        android:src="@drawable/bro"/>
+
+</RelativeLayout>

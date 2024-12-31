@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Accurepp</string>
+    <string-array name="category_array">
+        <item>Weight Loss</item>
+        <item>Weight Gain</item>
+    </string-array>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

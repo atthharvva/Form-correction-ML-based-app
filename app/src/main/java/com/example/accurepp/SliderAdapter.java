@@ -8,11 +8,55 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderViewHolder> {
 
-    private final Context context;
+//    private final Context context;
+//    private final int[] imageIds;
+//
+//    public SliderAdapter(Context context, int[] imageIds) {
+//        this.context = context;
+//        this.imageIds = imageIds;
+//    }
+//
+//    @NonNull
+//    @Override
+//    public SliderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        View view = LayoutInflater.from(context).inflate(R.layout.view_pager_item, parent, false);
+//        return new SliderViewHolder(view);
+//    }
+//
+//    @Override
+//    public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
+//        holder.imageView.setImageResource(imageIds[position]);
+//
+//        // Set an OnClickListener on the imageView
+//        holder.imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Start formcorrML activity on image click
+//                Intent intent = new Intent(context, formcorrML.class);
+//                context.startActivity(intent);
+//            }
+//        });
+//    }
+//
+//    @Override
+//    public int getItemCount() {
+//        return imageIds.length;
+//    }
+//
+//    public static class SliderViewHolder extends RecyclerView.ViewHolder {
+//        ImageView imageView;
+//
+//        public SliderViewHolder(@NonNull View itemView) {
+//            super(itemView);
+//            imageView = itemView.findViewById(R.id.imageView);
+//        }
+//    }
+private final Context context;
     private final int[] imageIds;
 
     public SliderAdapter(Context context, int[] imageIds) {
@@ -35,9 +79,15 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start formcorrML activity on image click
-                Intent intent = new Intent(context, formcorrML.class);
-                context.startActivity(intent);
+                // Ensure the context is an instance of an activity
+                if (context instanceof AppCompatActivity) {
+                    // Start formcorML activity on image click
+                    Intent intent = new Intent(context, formcorrML.class);
+                    context.startActivity(intent);
+                } else {
+                    // Log or handle the error if needed
+                    throw new IllegalStateException("Context is not an activity. Cannot start new activity.");
+                }
             }
         });
     }

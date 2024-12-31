@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -24,5 +25,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, SPLASH_TIMEOUT);    }
+        }, SPLASH_TIMEOUT);
+    }
 }

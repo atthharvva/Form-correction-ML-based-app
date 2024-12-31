@@ -2,24 +2,121 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <uses-feature
-        android:name="android.hardware.camera"
+        android:name="android.hardware.camera.any"
         android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/appicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/appicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Accurepp"
         tools:targetApi="31">
+        <activity
+            android:name=".latpulldown"
+            android:exported="false" />
+        <activity
+            android:name=".seatedcable"
+            android:exported="false" />
+        <activity
+            android:name=".bentoverrow"
+            android:exported="false" />
+        <activity
+            android:name=".legpress"
+            android:exported="false" />
+        <activity
+            android:name=".legextensions"
+            android:exported="false" />
+        <activity
+            android:name=".lunges"
+            android:exported="false" />
+        <activity
+            android:name=".pushupp"
+            android:exported="false" />
+        <activity
+            android:name=".benchpress"
+            android:exported="false" />
+        <activity
+            android:name=".cableflyes"
+            android:exported="false" />
+        <activity
+            android:name=".legss"
+            android:exported="false" />
+        <activity
+            android:name=".backkk"
+            android:exported="false" />
+        <activity
+            android:name=".chestt"
+            android:exported="false" />
+        <activity
+            android:name=".bakedcod"
+            android:exported="false" />
+        <activity
+            android:name=".turkey"
+            android:exported="false" />
+        <activity
+            android:name=".quinoa"
+            android:exported="false" />
+        <activity
+            android:name=".lentill"
+            android:exported="false" />
+        <activity
+            android:name=".shrimp"
+            android:exported="false" />
+        <activity
+            android:name=".grillchicken"
+            android:exported="false" />
+        <activity
+            android:name=".tofu"
+            android:exported="false" />
+        <activity
+            android:name=".veggrill"
+            android:exported="false" />
+        <activity
+            android:name=".salbowl"
+            android:exported="false" />
+        <activity
+            android:name=".pasta"
+            android:exported="false" />
+        <activity
+            android:name=".panee"
+            android:exported="false" />
+        <activity
+            android:name=".chickpe"
+            android:exported="false" />
+        <activity
+            android:name=".Consistent"
+            android:exported="false" />
+        <activity
+            android:name=".Cutting"
+            android:exported="false" />
+        <activity
+            android:name=".Bulking"
+            android:exported="false" />
+        <activity
+            android:name=".waterrem"
+            android:exported="false" />
+        <activity
+            android:name=".tricep1"
+            android:exported="false" />
+        <activity
+            android:name=".shoulder1"
+            android:exported="false" />
+        <activity
+            android:name=".bicep1"
+            android:exported="false" />
+        <activity
+            android:name=".squat1"
+            android:exported="false" />
         <activity
             android:name=".squats"
             android:exported="false" />

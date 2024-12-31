@@ -1,5 +1,6 @@
 package com.example.accurepp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
@@ -20,11 +22,12 @@ public class bmibmr extends AppCompatActivity {
     private String selectedGender = "Male";
     private int height = 170;
     private int weight = 70;
-    private int age = 22; // Initial age
+    private int age = 22;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_bmibmr);
 
         // Find views
@@ -32,6 +35,7 @@ public class bmibmr extends AppCompatActivity {
         btnFemale = findViewById(R.id.btnFemale);
         btnBMI = findViewById(R.id.btnBMI);
         btnBMR = findViewById(R.id.btnBMR);
+
         heightSlider = findViewById(R.id.heightSlider);
         weightSlider = findViewById(R.id.weightSlider);
         tvHeightValue = findViewById(R.id.tvHeightValue);
@@ -39,11 +43,14 @@ public class bmibmr extends AppCompatActivity {
         ageDisplay = findViewById(R.id.tvAgeValue); // Corrected ID
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
-        bck=findViewById(R.id.back);
+        bck = findViewById(R.id.btnBack);
         bck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(bmibmr.this, dashboard.class);
+                startActivity(i);
                 finish();
+
             }
         });
 
@@ -61,10 +68,12 @@ public class bmibmr extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
         // Weight slider change listener
@@ -76,10 +85,12 @@ public class bmibmr extends AppCompatActivity {
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
         });
 
         // Age adjustment button click listeners

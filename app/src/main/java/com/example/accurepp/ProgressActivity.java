@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ProgressActivity extends AppCompatActivity {
@@ -12,6 +13,7 @@ public class ProgressActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_progress);
 
         ProgressBar progressBar = findViewById(R.id.progressBar2);

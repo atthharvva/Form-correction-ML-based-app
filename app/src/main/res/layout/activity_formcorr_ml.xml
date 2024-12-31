@@ -5,31 +5,111 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".formcheck">
+    tools:context=".formcorrML"
+    android:background="#26262A">
 
-    <Button
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="squat"-->
+<!--        android:id="@+id/squatt"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="pushup"-->
+<!--        android:id="@+id/pushup"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="situps"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:id="@+id/situp"-->
+<!--        />-->
+
+    <ImageView
+        android:id="@+id/backblack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/backbut" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="squat"
-        android:id="@+id/squatt"
-        android:layout_marginTop="30dp"
-        />
+        android:src="@drawable/line"
+        android:id="@+id/lineline"
+        android:layout_marginTop="75dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="pushup"
-        android:id="@+id/pushup"
-        android:layout_marginTop="100dp"
-        />
+    <ImageButton
+        android:layout_width="307dp"
+        android:layout_height="102dp"
+        android:src="@drawable/spform"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="105dp"
+        android:id="@+id/shoulder1"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="situps"
-        android:layout_marginTop="200dp"
-        android:id="@+id/situp"
-        />
+    <ImageButton
+        android:layout_width="307dp"
+        android:layout_height="102dp"
+        android:src="@drawable/bcform"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="250dp"
+        android:id="@+id/bicep1"/>
+
+    <ImageButton
+        android:layout_width="307dp"
+        android:layout_height="102dp"
+        android:src="@drawable/oteform"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="395dp"
+        android:id="@+id/tricep1"/>
+
+    <ImageButton
+        android:layout_width="307dp"
+        android:layout_height="102dp"
+        android:src="@drawable/sqform"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="540dp"
+        android:id="@+id/squat1"/>
+
+<!--    <ImageButton-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:src="drawable/sqform"-->
+<!--        android:layout_marginTop="400dp"-->
+<!--        android:id="@+id/squat1"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="bicep1"-->
+<!--        android:layout_marginTop="450dp"-->
+<!--        android:id="@+id/bicep1"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="shoulder press 1"-->
+<!--        android:layout_marginTop="500dp"-->
+<!--        android:id="@+id/shoulder1"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="tricep extension 1"-->
+<!--        android:layout_marginTop="550dp"-->
+<!--        android:id="@+id/tricep1"-->
+<!--        />-->
 
 
 
